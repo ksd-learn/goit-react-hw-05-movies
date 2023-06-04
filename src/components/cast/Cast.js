@@ -8,7 +8,8 @@ export const Cast = () => {
     const { movieId } = useParams();
     
     const [data, setData] = useState([]);
-    const [error, setError] = useState('null');
+    const [, setError] = useState('null');
+    //const [error, setError] = useState('null');
 
     const defaultImg = 'https://www.baumandblume.com/wp-content/uploads/2017/02/no-image-icon-md.png';
 

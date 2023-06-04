@@ -4,7 +4,8 @@ import { MoviesList } from '../components/moviesList/MoviesList';
 
 const Home = () => {
 
-    const [searchParams, setSearchParams] = useSearchParams();
+    //const [searchParams, setSearchParams] = useSearchParams();
+    const [, setSearchParams] = useSearchParams();
 
     const APIreference = 'trending/movie/day';
     

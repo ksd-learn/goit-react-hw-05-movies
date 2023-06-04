@@ -11,9 +11,7 @@ const MovieDetailes = () => {
     const backLinkLocation = useRef(location.state?.from ?? '/movies')
 
     const [data, setData] = useState([]);
-    const [error, setError] = useState('null');
-
-    const defaultImg = 'https://www.baumandblume.com/wp-content/uploads/2017/02/no-image-icon-md.png';
+    const [, setError] = useState('null');
 
     useEffect(() => {
         if (!movieId) return;
@@ -26,7 +24,7 @@ const MovieDetailes = () => {
             .catch(error => setError(error))
     }, [movieId]);
 
-    const { id, title, release_date, overview, poster_path, genres } = data;
+    const { title, release_date, overview, poster_path, genres } = data;
 
     return (
         <>

@@ -11,7 +11,7 @@ export const Reviews = () => {
     const [pageQuery, setPageQuery] = useState(1);
     const [totalPages, setTotalPages] = useState(0);
     const [showPaginationForward, setShowPaginationForward] = useState(false);
-    const [error, setError] = useState('null');
+    const [, setError] = useState('null');
 
     const handlBtnRight = () => {
         if (totalPages > pageQuery) {
