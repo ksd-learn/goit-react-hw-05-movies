@@ -7,7 +7,8 @@ import css from './moviesList.module.css'
 export const MoviesList = ({ APIreference, btnPage}) => {
     
     const location = useLocation();
-    const [searchParams, setSearchParams] = useSearchParams();
+    const [searchParams, ] = useSearchParams();
+    //const [searchParams, setSearchParams] = useSearchParams();
     
     const queryValue = searchParams.get('query') ?? '';
     const queryPage = Number(searchParams.get('page') ?? 1);
