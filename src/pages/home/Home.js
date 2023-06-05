@@ -1,5 +1,5 @@
 import { useSearchParams } from "react-router-dom";
-import { MoviesList } from '../components/moviesList/MoviesList';
+import { MoviesList } from '../../components/moviesList/MoviesList';
 //import css from './Home.module.css'
 
 const Home = () => {

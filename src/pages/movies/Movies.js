@@ -1,7 +1,7 @@
 import { useState} from 'react';
 import { useSearchParams} from "react-router-dom";
-import { SearchMovie } from '../components/searchMovie/SearchMovie';
-import { MoviesList } from '../components/moviesList/MoviesList';
+import { SearchMovie } from '../../components/searchMovie/SearchMovie';
+import { MoviesList } from '../../components/moviesList/MoviesList';
 import css from './Movies.module.css'
 
 const Movies = () => {

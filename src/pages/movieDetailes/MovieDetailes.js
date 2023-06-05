@@ -1,6 +1,6 @@
 import { useState, useEffect, useRef} from 'react';
 import { useParams, Link, NavLink, Outlet, useLocation } from "react-router-dom";
-import { QueryApi } from '../API/QueryApi';
+import { QueryApi } from '../../API/QueryApi';
 import { SlArrowLeft } from "react-icons/sl";
 import css from './MovieDetailes.module.css'
 
