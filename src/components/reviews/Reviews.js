@@ -8,29 +8,19 @@ export const Reviews = () => {
     const { movieId } = useParams();
     
     const [data, setData] = useState([]);
-    const [pageQuery, setPageQuery] = useState(1);
-    const [totalPages, setTotalPages] = useState(0);
-    const [showPaginationForward, setShowPaginationForward] = useState(false);
     const [, setError] = useState('null');
 
-    const handlBtnRight = () => {
-        if (totalPages > pageQuery) {
-            setPageQuery((prevState) => prevState + 1);
-        }
-    };
 
     useEffect(() => {
         if (!movieId) return;
-        let queryParams = `movie/${movieId}/reviews?language=en-US&page=${pageQuery}`;
+        let queryParams = `movie/${movieId}/reviews?language=en-US`;
         QueryApi(queryParams)
             .then(({ total_pages, results }) => {
                 if (!total_pages) return Promise.reject(new Error("Поиск завершен, данных нет!"));
-                setData((prevstate) => [...prevstate, ...results])
-                setTotalPages(total_pages);
-                setShowPaginationForward(total_pages > pageQuery);
+                setData(results)
             })
             .catch(error => setError(error))
-    }, [pageQuery, movieId]);
+    }, [movieId]);
 
     return (
         <>
@@ -42,15 +32,10 @@ export const Reviews = () => {
                                 <h3>{author}</h3>
                                 <p>{content}</p>
                             </div>
-                    )})}
-
-                    {showPaginationForward &&
-                        <button type='button' onClick={handlBtnRight}>Right</button>
-                    }
-                
+                        )
+                    })}
                 </div>
             }
-            
             {!data.length &&
                 <p>We don't have any reviews for this movie</p>
             }

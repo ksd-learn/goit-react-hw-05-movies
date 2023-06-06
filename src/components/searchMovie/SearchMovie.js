@@ -21,8 +21,8 @@ export const SearchMovie = ({addQueryValue}) => {
     
     return (
         <>
-        <form onSubmit={handlSubmit}>
-            <input className={css.search}
+        <form className={css.search} onSubmit={handlSubmit}>
+            <input className={css.query}
               type="text"
               value={value}
               onChange={handleChange}

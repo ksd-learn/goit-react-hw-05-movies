@@ -1,36 +1,10 @@
 .list {
     display: flex;
     flex-direction: column;
-    padding: 15px 0;
 }
 
 .listLink {
     width: 30%;
     font-size: 16px;
     margin-bottom: 5px;
-}
-
-.listNav {
-    display: flex;
-    margin-bottom: 15px;
-
-    & button {
-        width: 50px;
-    }
-}
-
-.listNavLeft {
-    width: 6%;
-}
-
-.listNavLeftOff {
-    width: 5%;
-    font-weight: 300;
-    color: gray;
-    background-color: rgb(251 249 249);
-    border: 1px solid rgb(214 213 213);
-}
-
-.listError {
-    padding: 15px 0;
 }

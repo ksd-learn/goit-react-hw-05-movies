@@ -23,7 +23,7 @@ export const Cast = () => {
             })
             .catch(error => setError(error))
     }, [movieId]);
-
+    
     return (
         <div className={css.cast}>
             {data.map(({ id, character, name, profile_path }) => {return (
@@ -34,7 +34,11 @@ export const Cast = () => {
                     <h4>{name}</h4>
                     <p>Character: {character}</p>
                 </div>
-            )})}
+            )
+            })}
+            {!data.length &&
+                <p>We don't have any photo for this movie</p>
+            }
         </div>
     )
 }
